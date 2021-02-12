@@ -31,3 +31,56 @@ To follow my workflow and project organisation, I recommend that you reproduce t
     - `views/pages/page_home/topPanel-body.php`
     - `views/pages/page_aboutus/topPanel-body.php`
     - `views/pages/page_contact/topPanel-body.php`
+
+## **B. SASS**
+
+I use the SMACSS convention. Therefore, I organised my SCSS files to obtain the following order for my css rules :
+
+- `/utilities/`
+  - `_reset.scss`    OR  `_normalize.scss`
+  - `_mixins.scss`  (example: for CSS properties to declare for each browser.)
+  - `_colors.scss`  (optional: you can also put your colors in `_variables.scss`.
+  - `_variables.scss`
+  - `_animations.scss`
+
+- `/base/`        (here your css selector should never be a classe or an id)
+  - `_typo.scss`     or   `_fonts.scss`
+  - `_tables.scss`
+  - `_flex.scss`
+
+- `/layout/`     (position, margins, etc..)
+  here classes should be named:
+  - `.l-header {}`
+  - `.l-main {}`
+  - `.l-aside {}`
+  - `.l-footer {}`
+
+  files main areas :
+  - `_header.scss`
+  - `_main.scss`
+  - `_aside.scss`
+  - `_footer.scss`
+
+  files for pages :     (optional, you should not need it, but well, never say never)
+  - `_index.scss`
+  - `_concerts.scss`
+  - `_photos.scss`
+  - `_bio.scss`
+  - `_contact.scss`
+
+- `/modules/`      (here you should select almost always using classes)
+  - `.module {` common css rules for the parent `}`
+    - `.module-element {}`
+  - `.module--variation {` specific CSS rules of the parent for this version only `}`
+  files examples:
+  - `_navbar.scss`
+  - `_buttons.scss`
+
+- `/states/`   (states of buttons, or other)
+  - `_states.scss`
+    - `.module-element--stateName {}`
+
+- `/themes/`         ( selectors  `.dark`   `.light`   `.yellow` )
+  - `_dark.scss`
+  - `_light.scss`
+  - `_yellow.scss`

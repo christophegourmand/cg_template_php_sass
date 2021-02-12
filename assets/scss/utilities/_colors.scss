@@ -1,0 +1,86 @@
+/* =========================================== */
+/* UTILITIES / COLORS */
+/* =========================================== */
+
+// a map for generic colors, so you can use a loop @each to create multiples classes instantly. 
+    // 
+$generic_colors_map: (
+    "gray": hsl(0, 0%, 21%),
+    "lightgray": hsl(0, 0%, 37%),
+    "darkgray": hsl(0, 0%, 11%),
+    
+    "blue": hsl(216, 100%, 50%),
+    "lightblue": hsl(216, 100%, 74%),
+    "darkblue": hsl(216, 100%, 29%),
+    
+    "green": hsl(150, 100%, 46%),
+    "lightgreen": hsl(150, 100%, 75%),
+    "darkgreen": hsl(150, 97%, 24%),
+    
+    "red": hsl(0, 100%, 39%),
+    "lightred": hsl(9, 100%, 76%),
+    "darkred": hsl(9, 100%, 32%),
+    
+    "orange": hsl(22, 100%, 56%),
+    "lightorange": hsl(22, 100%, 64%),
+    "darkorange": hsl(22, 100%, 37%),
+    
+    "yellow": hsl(54, 100%, 50%),
+    "lightyellow": hsl(54, 100%, 74%),
+    "darkyellow": hsl(54, 98%, 38%),
+    
+    "gold": hsl(44, 100%, 50%),
+    "lightgold": hsl(44, 100%, 68%),
+    "darkgold": hsl(44, 100%, 39%),
+    
+    "cyan": hsl(172, 100%, 37%),
+    "lightcyan": hsl(172, 99%, 47%),
+    "cyan": hsl(172, 100%, 24%)
+);
+
+$theme_colors_map:(
+    "primary": hsl(216, 100%, 50%),
+    "primaryLighter": hsl(216, 100%, 74%),
+    "primaryDarker": hsl(216, 100%, 29%),
+
+    "secondary": hsl(288, 100%, 50%),
+    "secondaryLighter": hsl(288, 95%, 75%),
+    "secondaryDarker": hsl(288, 100%, 29%),
+    
+    "secondary": hsl(288, 100%, 50%),
+);
+
+
+
+
+:root {
+    --theme-color_important: #e40000;
+    --theme-color_neutral: white;
+    --theme-color_discret: #b0b0b0;
+
+    // --theme-color_background: #1c1c1c;
+    --theme-color_background: #1c1c1c;
+    --theme-color_brand: white;
+}
+
+$dominant-color: #f50000;
+
+
+// developer can use for test : 
+.white {
+    color: var(--theme-color_neutral);
+}
+
+// here a SASS "map" containing colors : will be use for classes border-<colorName>
+// declaration format :   "colorNameAsKey": ..here color (ex: red , ex: hsl(,,) , ex: $aaAaaAa 
+$borderColors_map: (
+    "blue": $blue,
+    "red": $red,
+    "orange": $orange,
+    "green": $green,
+    "yellow": $yellow,
+    "purple": purple,   // here normal css color
+    "pink": pink        // here normal css color
+);
+
+// here a SASS loop to generate classes "border-...." for each color

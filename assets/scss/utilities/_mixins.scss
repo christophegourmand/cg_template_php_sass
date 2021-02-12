@@ -1,0 +1,23 @@
+/* =========================================== */
+/* UTILITIES / MIXINS */
+/* =========================================== */
+
+@mixin flex_row($x-align:space-evenly, $y-align:center){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: $x-align;
+    align-items: $y-align;
+}
+
+@mixin flex_col($x-align, $y-align){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: $x-align;
+    align-items: $y-align;
+}
+
+@mixin add_border($color){
+    border: 1px solid $color; // ============= de-activate this line if you want to switch off the borders
+}

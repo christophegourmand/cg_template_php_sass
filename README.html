@@ -62,6 +62,85 @@
 </ul>
 </li>
 </ul>
+<h2 id="b-sass"><strong>B. SASS</strong></h2>
+<p>I use the SMACSS convention. Therefore, I organised my SCSS files to obtain the following order for my css rules :</p>
+<ul>
+<li>
+<p><code>/utilities/</code></p>
+<ul>
+<li><code>_reset.scss</code>    OR  <code>_normalize.scss</code></li>
+<li><code>_mixins.scss</code>  (example: for CSS properties to declare for each browser.)</li>
+<li><code>_colors.scss</code>  (optional: you can also put your colors in <code>_variables.scss</code>.</li>
+<li><code>_variables.scss</code></li>
+<li><code>_animations.scss</code></li>
+</ul>
+</li>
+<li>
+<p><code>/base/</code>        (here your css selector should never be a classe or an id)</p>
+<ul>
+<li><code>_typo.scss</code>     or   <code>_fonts.scss</code></li>
+<li><code>_tables.scss</code></li>
+<li><code>_flex.scss</code></li>
+</ul>
+</li>
+<li>
+<p><code>/layout/</code>     (position, margins, etc..)<br>
+here classes should be named:</p>
+<ul>
+<li><code>.l-header {}</code></li>
+<li><code>.l-main {}</code></li>
+<li><code>.l-aside {}</code></li>
+<li><code>.l-footer {}</code></li>
+</ul>
+<p>files main areas :</p>
+<ul>
+<li><code>_header.scss</code></li>
+<li><code>_main.scss</code></li>
+<li><code>_aside.scss</code></li>
+<li><code>_footer.scss</code></li>
+</ul>
+<p>files for pages :     (optional, you should not need it, but well, never say never)</p>
+<ul>
+<li><code>_index.scss</code></li>
+<li><code>_concerts.scss</code></li>
+<li><code>_photos.scss</code></li>
+<li><code>_bio.scss</code></li>
+<li><code>_contact.scss</code></li>
+</ul>
+</li>
+<li>
+<p><code>/modules/</code>      (here you should select almost always using classes)</p>
+<ul>
+<li><code>.module {</code> common css rules for the parent <code>}</code>
+<ul>
+<li><code>.module-element {}</code></li>
+</ul>
+</li>
+<li><code>.module--variation {</code> specific CSS rules of the parent for this version only <code>}</code><br>
+files examples:</li>
+<li><code>_navbar.scss</code></li>
+<li><code>_buttons.scss</code></li>
+</ul>
+</li>
+<li>
+<p><code>/states/</code>   (states of buttons, or other)</p>
+<ul>
+<li><code>_states.scss</code>
+<ul>
+<li><code>.module-element--stateName {}</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>/themes/</code>         ( selectors  <code>.dark</code>   <code>.light</code>   <code>.yellow</code> )</p>
+<ul>
+<li><code>_dark.scss</code></li>
+<li><code>_light.scss</code></li>
+<li><code>_yellow.scss</code></li>
+</ul>
+</li>
+</ul>
 
     </body>
     </html>
