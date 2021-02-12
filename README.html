@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>cg&lowbar;template&lowbar;php&lowbar;sass</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 13px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body">
+        <h1 id="cg_template_php_sass">cg_template_php_sass</h1>
+<h2 id="warm-welcome"><strong>warm welcome</strong></h2>
+<p>I am pleased to present you my humble template for all of you who want to create a fast and simple Front-end project using native PHP, and using SASS. These two langages will allow beginners to write some simple code, and still split-it into multiples files so they get used of a well-organised project. Which is why I don't use short variables names, or files names : using clear (sometime obvious) names makes comments almost un-necessary, the code being readable like a book (if not please tell me).</p>
+<p>Being a junior myself, this project is perfectible, but remember that the goal is to keep the project easy to maintain, specially for beginners.</p>
+<h2 id="a-views-folder"><strong>A. 'views' folder</strong></h2>
+<p>Every php files who can render some HTML are located in <code>./views/</code> folder.</p>
+<h3 id="1-for-each-page"><strong>1. For each page</strong></h3>
+<p>To follow my workflow and project organisation, I recommend that you reproduce the following :</p>
+<ul>
+<li>each page file is named <code>page_something.php</code></li>
+<li>the file <code>page_something.php</code> contain mostly the php logic (variables and mostly some <code>include()</code>). list of includes :
+<ul>
+<li>head.php</li>
+<li>header.php</li>
+<li>navbar.php (if not in header)</li>
+<li>topPanel.php (if not in header)</li>
+<li>page-content.php (who render the HTML of the page)</li>
+<li>footer.php</li>
+<li>load_js_script.php</li>
+</ul>
+</li>
+<li>a folder <code>page_something</code> is created to contain the php files rendering the html for this page only.
+<ul>
+<li>(if some rendered-html is shared with other pages, it should better be in a separated file located in <code>./views/common/</code> !).</li>
+</ul>
+</li>
+<li>the folder <code>page_something</code> will always contain its html content in a file who will be named <code>page-content.php</code>. So every folder <code>page_something</code> will have such a file, named exactly: <code>page-content.php</code>.</li>
+<li>the folder <code>page_something</code> of several pages might (if necessary) also contain some <code>moduleName-body.php</code>, allowing for each page to overwrite the content of a same module.
+<ul>
+<li>example each of these pages can overwrite the body of a same module:
+<ul>
+<li><code>views/pages/page_home/topPanel-body.php</code></li>
+<li><code>views/pages/page_aboutus/topPanel-body.php</code></li>
+<li><code>views/pages/page_contact/topPanel-body.php</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </body>
+    </html>
